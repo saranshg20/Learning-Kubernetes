@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+# Three parts of YAML configuration file
+# 1) Metadata
+# 2) Specifications
+# 3) Status 
+# (Created by kubernetes) 
+# {Either Desired or Actual. Kubernetes will update will update this continuously }
+# Status Information comes from etcd.
+# Store the config file with your code or separate repo for config files
+
